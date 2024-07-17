@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Bienvenidos!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle style="font-size: 19px;">En esta aplicación podrán encontrar tutoriales para todos los procesos
+        de la FHGCP, tales como:</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+
+        <ion-item routerLink="/tutorial/1">
+          <ion-thumbnail slot="start">
+            <img src="assets/img/boleta.png" />
+          </ion-thumbnail>
+          <ion-label>Cómo rendir una boleta/cuenta</ion-label>
+        </ion-item>
+
+        <ion-item routerLink="/tutorial/2">
+          <ion-thumbnail slot="start">
+            <img src="assets/img/libros.png" />
+          </ion-thumbnail>
+          <ion-label>Cómo solicitar un viatico</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-item routerLink="/tutorial/3">
+        <ion-thumbnail slot="start">
+          <img src="assets/img/formulario.png" />
+        </ion-thumbnail>
+        <ion-label>Cómo enviar una solicitud DOI</ion-label>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

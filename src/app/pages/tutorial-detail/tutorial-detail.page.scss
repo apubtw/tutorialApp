@@ -1,0 +1,22 @@
+/* tutorial-detail.page.scss */
+
+.tutorial-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .tutorial-content h1 {
+    margin-bottom: 10px; /* Espaciado entre el título y el contenido */
+  }
+  
+  .tutorial-content p {
+    white-space: pre-line; /* Asegura que los saltos de línea se muestren correctamente */
+    line-height: 1.6;
+  }
+  
+  ion-toolbar {
+    --background: #5b3aff;
+    --color: white;
+  }

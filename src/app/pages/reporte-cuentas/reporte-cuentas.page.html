@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Formulario Rendicion de cuentas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="full" class="ion-no-padding">
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="stacked">Nombre Completo</ion-label>
+      <ion-input type="text" [(ngModel)]="nombreCompleto" name="nombreCompleto" required></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="stacked">Correo UC</ion-label>
+      <ion-input type="email" [(ngModel)]="correoUC" name="correoUC" required></ion-input>
+    </ion-item>
+
+    <ion-item style="margin-top: 20px;">
+      <ion-label position="stacked">Nombre y Descripción del Proyecto</ion-label>
+      <ion-textarea rows="4" [(ngModel)]="descripcionProyecto" name="descripcionProyecto" required></ion-textarea>
+    </ion-item>
+
+    <ion-buttons slot="secondary">
+      <ion-button class="custom-file-input">
+        <ion-icon slot="start" name="attach"></ion-icon>
+        Adjuntar Archivos ZIP
+        <input type="file" multiple (change)="adjuntarArchivo($event)" />
+      </ion-button>
+    </ion-buttons>
+    <p style="margin-left: 30px; font-size: 15px;">
+      Debe adjuntar 1 solo archivo ZIP, con todas las evidencias necesarias
+    </p>
+    <ion-item *ngIf="archivoZip">
+      Archivo adjunto: {{ archivoZip.name }}
+    </ion-item>
+
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <ion-button (click)="enviarReporte()">
+        Enviar Reporte
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>

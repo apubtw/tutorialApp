@@ -1,0 +1,18 @@
+<!-- tutorial-detail.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tutorials"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ tutorial?.title }}</ion-title>
+    <ion-button color="light" style="margin-right: 16px;" slot="end" (click)="downloadPDF()">Descargar PDF</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="tutorial-content" *ngIf="tutorial" id="tutorial-content">
+    <!-- Contenido del tutorial -->
+    <h1>{{ tutorial.title }}</h1>
+    <p [innerHTML]="tutorial.content"></p>
+  </div>
+</ion-content>
