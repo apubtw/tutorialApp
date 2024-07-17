@@ -32,7 +32,7 @@ export class ReporteCuentasPage {
     }
   
     const headers = new HttpHeaders();
-    headers.append('Accept', 'text/html'); // Asegúrate de aceptar texto/html
+    headers.append('Accept', 'text/html');
   
     this.http.post('https://soapy-general-blackbird.glitch.me/send-email', formData, { headers, responseType: 'text' })
       .pipe(
